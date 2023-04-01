@@ -21,7 +21,7 @@ async function consoleMemos(memos) {
     const message = memo.message;
     const name = memo.name;
     const from = memo.from;
-    const sentEth = hre.ethers.utils.formatEther(memo.value);
+    const sentEth = hre.ethers.utils.formatEther(memo.amount);
     console.log(
       `At Timestamp: ${timestamp} - Message: ${message} - Name: ${name} - From: ${from} - Amount: ${sentEth}`
     );
