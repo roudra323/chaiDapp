@@ -7,6 +7,7 @@ contract chai {
         string message;
         uint timestamp;
         address from;
+        uint amount;
     }
 
     Memo[] memos;
@@ -25,7 +26,9 @@ contract chai {
             "You can't pay 0 . Try again with the value greater than 0"
         );
         owner.transfer(msg.value);
-        memos.push(Memo(_name, _message, block.timestamp, msg.sender));
+        memos.push(
+            Memo(_name, _message, block.timestamp, msg.sender, msg.value)
+        );
     }
 
     function getMemos() public view returns (Memo[] memory) {
