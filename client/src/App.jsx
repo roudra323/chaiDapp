@@ -2,6 +2,8 @@ import abi from "../../artifacts/contracts/chai.sol/Chai.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./App.css";
+import Buy from "./components/buy";
+import Memos from "./components/memos";
 
 function App() {
   const [state, setState] = useState({
@@ -57,7 +59,7 @@ function App() {
 
   return (
     <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
-      <p>hi there, i am working</p>
+      <Buy state={state} />
     </div>
   );
 }
