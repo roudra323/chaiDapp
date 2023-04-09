@@ -7,6 +7,13 @@ const buy = ({ state }) => {
     const name = document.getElementById("name").value;
     const message = document.getElementById("message").value;
     console.log(name, message, contract);
+
+    const value = { value: ethers.utils.parseEther("0.001") };
+
+    const transaction = await contract.buyChai(name, message, value);
+    await transaction.wait();
+
+    console.log("Transaction complete!");
   };
 
   return (
