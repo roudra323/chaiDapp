@@ -59,6 +59,7 @@ function App() {
   return (
     <div>
       <Buy state={state} />
+      <Memos state={state} />
     </div>
   );
 }

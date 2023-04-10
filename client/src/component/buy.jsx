@@ -1,4 +1,5 @@
 import React from "react";
+import { ethers } from "ethers";
 
 const buy = ({ state }) => {
   const buyChai = async (event) => {
