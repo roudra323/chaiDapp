@@ -19,13 +19,39 @@ const buy = ({ state }) => {
 
   return (
     <>
-      <form onSubmit={buyChai}>
-        <label>Name</label>
-        <input type="text" id="name" placeholder="Enter your name" />
-        <label>Message</label>
-        <input type="text" id="message" placeholder="Enter your message" />
-        <button type="submit">Pay</button>
-      </form>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <form onSubmit={buyChai} className="py-5">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Enter name"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="message"
+                  placeholder="Message"
+                  required
+                />
+              </div>
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">
+                  Pay
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

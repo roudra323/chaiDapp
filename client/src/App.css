@@ -1,0 +1,26 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+}
+
+#root .connect-wallet {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.connect-wallet:hover {
+  background-color: #218838;
+}

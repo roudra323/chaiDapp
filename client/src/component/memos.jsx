@@ -20,17 +20,30 @@ const memos = ({ state }) => {
   return (
     <>
       <h1 align="center">Memos</h1>
-      {memos.map((memo, index) => (
-        <div align="center" key={index}>
-          <p>Index: {index}</p>
-          <p>Name: {memo.name}</p>
-          <p>Message: {memo.message}</p>
-          <p>From: {memo.from}</p>
-          <p>Timestamp: {formatDate(memo.timestamp)}</p>
-          <hr />
-        </div>
-      ))}
-      ;
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th align="center">Index</th>
+            <th align="center">Name</th>
+            <th align="center">Message</th>
+            <th align="center">From</th>
+            <th align="center">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {memos.map((memo, index) => (
+            <tr key={index}>
+              <td>{index}</td>
+              <td>{memo.name}</td>
+              <td>{memo.message}</td>
+              <td>{memo.from}</td>
+              <td>
+                {new Date(memo.timestamp.toNumber() * 1000).toLocaleString()}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };
