@@ -5,12 +5,14 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #f5f5f5;
+  background-image: url('./assets/bgImg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-#root .connect-wallet {
+.connect-wallet {
   position: absolute;
-  transform: translateY(-50%);
   right: 0;
   padding: 12px 24px;
   background-color: #28a745;
@@ -21,6 +23,19 @@
   cursor: pointer;
   transition: background-color 0.2s;
 }
-.connect-wallet:hover {
+
+#root .connect-wallet:hover {
   background-color: #218838;
+}
+
+.connect-wallet:hover {
+  cursor: pointer;
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.connect-wallet.connected:hover {
+  cursor: default;
+  background-color: #6c757d;
+  color: #fff;
 }

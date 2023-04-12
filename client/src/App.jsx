@@ -1,5 +1,5 @@
 import abi from "../../artifacts/contracts/chai.sol/Chai.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ethers } from "ethers";
 import "./App.css";
 import Buy from "./component/buy";
@@ -52,30 +52,10 @@ function App() {
     }
   };
 
-  const disconnectWallet = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (ethereum) {
-        await ethereum.request({
-          method: "eth_requestAccounts",
-          params: [null],
-        });
-        setAccount("None");
-        setState({ provider: null, signer: null, contract: null });
-        setIsConnected(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <div className="container">
       {isConnected ? (
-        <button className="connect-wallet float-end" onClick={disconnectWallet}>
-          Disconnect Wallet
-        </button>
+        <button className="connect-wallet float-end">Connected</button>
       ) : (
         <button className="connect-wallet float-end" onClick={connectWallet}>
           Connect Wallet

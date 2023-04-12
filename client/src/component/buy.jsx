@@ -45,7 +45,7 @@ const buy = ({ state }) => {
               </div>
               <div className="text-center">
                 <button type="submit" className="btn btn-primary">
-                  Pay
+                  Donate
                 </button>
               </div>
             </form>
